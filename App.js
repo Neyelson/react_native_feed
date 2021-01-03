@@ -7,7 +7,7 @@ const users = [
 ]
 
 import React from 'react';
-import { View, Text, Image, StyleSheet, } from 'react-native'
+import { TouchableOpacity, View, Text, Image, StyleSheet, } from 'react-native'
 import { Card, ListItem, Button, Icon } from 'react-native-elements'
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 
@@ -17,11 +17,12 @@ export default function App() {
     <SafeAreaProvider >
     <SafeAreaView style={styles.container}>
 
-      <Card style={styles.card} elevation={10}>
-        <Card.Title>HELLO WORLD</Card.Title>
-        <Card.Divider />
-        <Card.Image source={{ uri: "https://i.ytimg.com/vi/xyzW59BQwoI/maxresdefault.jpg" }} />
-        <Text style={{ marginTop: 10 }}>Although the docs says it is relevant only for iOS, when I used React's SafeAreaView it acted differently on different.</Text>
+      <Card style={styles.card} elevation={7}>
+      <TouchableOpacity >
+        <Card.Title style={styles.title}>13º missão da Rocket Lab fracassa e satélites são perdidos</Card.Title>
+        <Card.Image source={{ uri: "https://rocketsciencebrasil.com/wp-content/uploads/2020/07/rocketlabfail.jpg" }} />
+        <Text style={{ marginTop: 10 }}>Um problema desconhecido com o foguete Electron, da empresa Rocket Lab, ocasionou falha na missão e houve perda total dos satélites que deveriam ter sido entregues hoje.</Text>
+        </TouchableOpacity>
       </Card>
    
     </SafeAreaView>
@@ -35,5 +36,9 @@ const styles = StyleSheet.create({
   },
   card: {
 
+  },
+  title: {
+    textAlign: "left",
+    textTransform:'uppercase'
   },
 });
