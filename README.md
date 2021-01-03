@@ -5,4 +5,5 @@
 
 # Componentes utilizados
 
-> 
+> react-native-safe-area-context<br>
+> react-native-elements
