@@ -7,3 +7,4 @@
 
 > react-native-safe-area-context<br>
 > react-native-elements
+> react-native-render-html
